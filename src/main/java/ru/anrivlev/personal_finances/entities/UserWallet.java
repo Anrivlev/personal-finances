@@ -15,12 +15,6 @@ public class UserWallet {
 
     private String userPassword;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "financial_operation_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
-    private FinancialOperation financialOperation;
-
     public UserWallet() {
     }
 
@@ -46,13 +40,5 @@ public class UserWallet {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
-    }
-
-    public FinancialOperation getFinancialOperation() {
-        return financialOperation;
-    }
-
-    public void setFinancialOperation(FinancialOperation financialOperation) {
-        this.financialOperation = financialOperation;
     }
 }
