@@ -3,6 +3,7 @@ package ru.anrivlev.personal_finances.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.anrivlev.personal_finances.entities.UserWallet;
+import ru.anrivlev.personal_finances.model.UserWalletFinancialInformation;
 import ru.anrivlev.personal_finances.repo.UserWalletRepository;
 
 import java.util.Optional;

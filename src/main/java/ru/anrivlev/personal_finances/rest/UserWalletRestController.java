@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.anrivlev.personal_finances.entities.UserWallet;
+import ru.anrivlev.personal_finances.model.UserWalletFinancialInformation;
 import ru.anrivlev.personal_finances.service.UserWalletService;
 
 import java.util.Objects;
@@ -16,7 +17,7 @@ public class UserWalletRestController {
     @Autowired
     UserWalletService userWalletService;
 
-    @GetMapping(value = "/user/{userLogin}")
+    @GetMapping(value = "/wallet/{userLogin}/create")
     public ResponseEntity<Integer> saveUserWallet(
             @PathVariable(name = "userLogin") String userLogin,
             @RequestParam(name = "password") String userPassword,
